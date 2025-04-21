@@ -1,0 +1,36 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7fa;
+  }
+  
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../images/poker-bg.jpg') no-repeat center center/cover;
+  }
+  
+  .features-section, .cta-section {
+    background-color: #2a4d3e;
+  }
+  
+  .feature-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+  }
+  
+  .btn-primary, .btn-success {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover, .btn-success:hover {
+    transform: scale(1.05);
+  }
+  
+  footer a:hover {
+    color: #99f2c8 !important;
+  }

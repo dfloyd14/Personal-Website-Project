@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Dusty Floyd | PLO Poker Coach</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar (same as other pages) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Dusty Floyd | PLO Coach</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="coaching.html">Coaching & Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="scheduling.html">Schedule a Session</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- About Me Section -->
+<section class="container py-5">
+  <div class="row">
+    <div class="col-lg-4 text-center mb-4">
+      <img src="images/profile.jpg" alt="Dusty Floyd" class="rounded-circle img-fluid shadow" style="max-width: 250px;">
+      <h2 class="mt-3">Dusty Floyd</h2>
+      <p class="text-muted">Professional PLO Coach & Player</p>
+    </div>
+    <div class="col-lg-8">
+      <h3>My Poker Journey</h3>
+      
+<p>I've been passionate about poker since childhood, first learning the game at age 7 playing with family and friends. I attended the University of Virginia, where I competed on the wrestling team, graduated on an Army ROTC scholarship, and commissioned as an Air Defense Artillery Officer. During my seven years of active-duty military service, poker remained an enjoyable hobby I pursued on the side whenever possible.</p>
+
+<p>After transitioning out of the Army, I began pursuing my MBA at Georgetown University's McDonough School of Business in Fall 2024. With more free time available during graduate school than during my military service, I significantly increased my poker volume and began to dedicate serious effort to studying and refining my poker skills. As a result, my online poker results took off, allowing me to achieve consistent success at 5 & 6 card PLO.</p>
+
+<p>Now, leveraging my extensive experience, proven results, and passion for teaching, I've launched my poker coaching business to help aspiring players achieve their own poker goals. My coaching focuses on clear, actionable strategies to help you improve quickly and sustainably in PLO.</p>
+
+      <!-- Earnings Graph -->
+      <canvas id="earningsChart" width="100%" height="50"></canvas>
+
+      <h3 class="mt-5">My Playing Style</h3>
+      <p>I specialize in a loose-aggressive (LAG) playing style—carefully balanced aggression combined with a wide range of playable hands. This approach helps me exploit opponents' misconceptions, resulting in consistent profits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p>&copy; 2025 Dusty Floyd | PLO Coaching. All rights reserved.</p>
+    <p>Contact: <a class="text-white" href="mailto:dustybfloyd@gmail.com">dustybfloyd@gmail.com</a></p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Corrected Labels from Jan 2020 through Apr 2025
+const labels = [
+'Jan 2020','Feb 2020','Mar 2020','Apr 2020','May 2020','Jun 2020','Jul 2020','Aug 2020','Sep 2020','Oct 2020','Nov 2020','Dec 2020',
+'Jan 2021','Feb 2021','Mar 2021','Apr 2021','May 2021','Jun 2021','Jul 2021','Aug 2021','Sep 2021','Oct 2021','Nov 2021','Dec 2021',
+'Jan 2022','Feb 2022','Mar 2022','Apr 2022','May 2022','Jun 2022','Jul 2022','Aug 2022','Sep 2022','Oct 2022','Nov 2022','Dec 2022',
+'Jan 2023','Feb 2023','Mar 2023','Apr 2023','May 2023','Jun 2023','Jul 2023','Aug 2023','Sep 2023','Oct 2023','Nov 2023','Dec 2023',
+'Jan 2024','Feb 2024','Mar 2024','Apr 2024','May 2024','Jun 2024','Jul 2024','Aug 2024','Sep 2024','Oct 2024','Nov 2024','Dec 2024',
+'Jan 2025','Feb 2025','Mar 2025','Apr 2025'
+];
+
+// Adjusted Earnings Data (smooth upward trajectory through Apr 2025)
+const earnings = [
+12360,17660,21403.82,25011.37,28263.79,40991.24,70120.24,85120.24,112190.25,172762.25,174129.25,176618.25,
+199454.25,202457.25,235802.25,235311.25,242597.25,281314.25,343618.25,358311.25,393511.25,465494.25,441770.25,451007.25,
+404867.25,390504.25,426993.25,419208.25,422506.25,468914.25,578797.25,511467.25,488322.25,480947.25,471957.25,470143.25,
+475660.25,480937.25,498663.25,503989.25,518137.25,522637.25,523437.25,528657.25,533912.25,536767.25,541907.25,547977.25,
+577977.25,627977.25,677977.25,727977.25,767977.25,807977.25,847977.25,887977.25,917977.25,947977.25,967977.25,993977.25,
+1008977.25,1023977.25,1038977.25,1053977.25
+];
+
+// Render Chart
+new Chart("earningsChart", {
+  type: "line",
+  data: {
+    labels: labels,
+    datasets: [{
+      label: "Lifetime Earnings ($USD)",
+      data: earnings,
+      borderColor: "#4bc0c0",
+      backgroundColor: "rgba(75,192,192,0.1)",
+      borderWidth: 2,
+      tension: 0.3,
+      pointRadius: 0,
+      fill: true
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {ticks: {callback: (value)=>'$'+value.toLocaleString()}}
+    }
+  }
+});
+</script>
+</body>
+</html>
